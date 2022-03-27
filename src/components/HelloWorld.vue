@@ -21,7 +21,7 @@
 
     <section class="items">
     <v-btn v-if="!showFinished" @click="showFinished = !showFinished">Show finished</v-btn>
-    <v-btn v-else @click="showFinished = !showFinished">hide finished</v-btn> 
+    <v-btn v-else @click="showFinished = !showFinished">Hide finished</v-btn> 
     <!-- existuje alternativa použitím jen 1 tlačítka? -->
     <div v-if="showFinished">
       <div v-for="task in finished" :key="task" class="items-list">
@@ -48,7 +48,7 @@ export default defineComponent({
       ],
       finished: [{ id: 0, text: "" }], 
       //neviditelný prvek array, 
-      //potřebuju zjistit jak se předefinuje array bez obsahu
+      //potřebuju zjistit jak se předdefinuje array bez obsahu
       //mám na mysli například prázdný array s kontrukcí [{id: number, text: string}]
     };
   },
